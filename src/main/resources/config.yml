@@ -1,0 +1,58 @@
+config:
+  autoMessageTime: 10
+  messages:
+
+
+messages:
+  notconsole: "&a&lAutoMessage &8» &cTa komenda nie moze zostac wywolana z konsoli."
+  errorNumber: "&a&lAutoMessage &8» &cLiczba musi byc z zakresu <1, 32767>!"
+  messageNotExist: "&a&lAutoMessage &8» &cNie istnieje wiadomosc o takim id!"
+  nopermission: "&cBrak uprawnien &7(&6CrC.automessage&7)"
+  list:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg list."
+    list: "&a&lAutoMessage &8» &7Treść wiadomości: &6{TEXT}"
+    titleMessageHover:
+      - "&7Status: &6{STATUS}&7."
+      - "&7Id: &6{ID}&7."
+    listMessageHover: "- {TEXT}"
+  print:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg print."
+    messageStatus: "&a&lAutoMessage &8» &7Wiadomosci zostaly: &6{STATUS}&7."
+  create:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg create (tekst wiadomosci)."
+    addMessage: "&a&lAutoMessage &8» &7Dodano nowa wiadomosc o id: &6{ID}&7. Jesli chcesz zaaktualizowac aktualnie wyswietlane wiadomosci wpisz /automsg reload."
+  settime:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg settime (czas w sekundach)."
+    errorNumberSetTime: "&a&lAutoMessage &8» &cLiczba musi byc z zakresu <1, 2147483647>."
+    setTime: "&a&lAutoMessage &8» &7Czas automatycznych wiadomosci zostal ustawiony na: &6{TIME}&7. W celu wprowadzenia zmian, wpisz /automsg reload."
+  reload:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg reload."
+    reload: "&a&lAutoMessage &8» &7Plugin zostal pomyslnie przeladowany."
+  delete:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg delete (id)."
+    deleteMessage: "&a&lAutoMessage &8» &7Wiadomosc o id &6{ID} &7zostala usunieta. Jesli chcesz zaaktualizowac aktualnie wyswietlane wiadomosci wpisz /automsg reload."
+  removehover:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg removehover (id) (numer linijki tekstu)."
+    emptyHover: "&a&lAutoMessage &8» &cBrak dodanych wiadomosci pojawiajacych sie po najechaniu na tekst."
+    errorLineHover: "&a&lAutoMessage &8» &cNie ma wiadomosci o takim numerze!"
+    removeLineHover: "&a&lAutoMessage &8» &7Podana linia tekstu zostala pomyslnie usunieta."
+  addhover:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg addhover (id) (tekst)."
+    addHover: "&a&lAutoMessage &8» &7Wiadomosc zostala pomyslnie dodana."
+  settext:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg settext (id) (tekst)."
+    setText: "&a&lAutoMessage &8» &7Tresc wiadomosci zostala pomyslnie zmieniona."
+  status:
+    usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg status (id)."
+    changeStatus: "&a&lAutoMessage &8» &7Wiadomosc o id &6{ID} &7zostala: &6{STATUS}&7. Jesli chcesz zaaktualizowac aktualnie wyswietlane wiadomosci wpisz /automsg reload."
+  help:
+    - "&a&lAutoMessage &8» &6/automsg list &7- Lista wiadomości"
+    - "&a&lAutoMessage &8» &6/automsg print &7- Wlaczenie/wylaczenie automatycznych wiadomosci"
+    - "&a&lAutoMessage &8» &6/automsg create (tekst wiadomosci) &7- Dodawanie wiadomosci"
+    - "&a&lAutoMessage &8» &6/automsg delete (id) &7- Usuwanie wiadomosci"
+    - "&a&lAutoMessage &8» &6/automsg removehover (id) (numer linijki tekstu)  &7- Usuwanie tekstu po najechaniu na wiadomosc"
+    - "&a&lAutoMessage &8» &6/automsg addhover (id) (tekst) &7- Dodawanie tekstu po najechaniu na wiadomosc"
+    - "&a&lAutoMessage &8» &6/automsg settext (id) (tekst) &7- Zmiana tekstu wiadomości"
+    - "&a&lAutoMessage &8» &6/automsg status (id) &7- Zmienia status wiadomosc"
+    - "&a&lAutoMessage &8» &6/automsg settime (czas w sekundach) &7- Ustawia czas automatycznych wiadomosci"
+    - "&a&lAutoMessage &8» &6/automsg reload &7- Przeladowywuje plugin"

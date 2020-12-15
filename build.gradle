@@ -1,6 +1,10 @@
 import org.apache.tools.ant.filters.ReplaceTokens
 
-apply plugin: 'java'
+plugins {
+    id 'java'
+    id "com.github.johnrengelman.shadow" version "5.0.0"
+}
+compileJava.options.encoding = 'UTF-8'
 
 group = 'pl.crystalek.crcautomessage'
 version = '1.0-SNAPSHOT'
@@ -17,6 +21,14 @@ repositories {
     maven {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
+    }
+}
+
+shadowJar {
+    minimize()
+    final String dest = System.getenv("DESTINATION")
+    if (dest != null) {
+        destinationDirectory.set(new File(dest))
     }
 }
 
