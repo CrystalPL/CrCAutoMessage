@@ -5,7 +5,7 @@ import pl.crystalek.crcautomessage.util.ChatUtil;
 
 import java.util.List;
 
-public class Message {
+public final class Message {
     private final TextComponent textComponent;
     private String text;
     private boolean status;

@@ -1,18 +1,16 @@
 package pl.crystalek.crcautomessage.task;
 
-import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.Bukkit;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 import pl.crystalek.crcautomessage.CrCAutoMessage;
-import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.message.Message;
-import pl.crystalek.crcautomessage.util.ChatUtil;
+import pl.crystalek.crcautomessage.message.MessageManager;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class AutoMessageTask {
+public final class AutoMessageTask {
     private final CrCAutoMessage crCAutoMessage;
     private final MessageManager messageManager;
     private int taskId;

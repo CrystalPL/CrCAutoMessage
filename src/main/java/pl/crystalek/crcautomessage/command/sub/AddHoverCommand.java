@@ -3,15 +3,15 @@ package pl.crystalek.crcautomessage.command.sub;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.CommandSender;
 import pl.crystalek.crcautomessage.io.FileManager;
-import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.message.Message;
+import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.util.ChatUtil;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class AddHoverCommand implements SubCommand {
+public final class AddHoverCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
     private final CommandUtil commandUtil;

@@ -3,7 +3,7 @@ package pl.crystalek.crcautomessage.message;
 import java.util.HashMap;
 import java.util.Map;
 
-public class MessageManager {
+public final class MessageManager {
     private final Map<Short, Message> autoMsgMap = new HashMap<>();
     private boolean autoMsgStatus = true;
     private int autoMsgTime;

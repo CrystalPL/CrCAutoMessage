@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class AutoMessageCommand implements TabExecutor {
+public final class AutoMessageCommand implements TabExecutor {
     private final MessageManager messageManager;
     private final FileManager fileManager;
     private final Map<String, SubCommand> subCommands = new HashMap<>();

@@ -12,7 +12,7 @@ import pl.crystalek.crcautomessage.util.NumberUtil;
 import java.util.*;
 import java.util.logging.Logger;
 
-public class FileManager {
+public final class FileManager {
     private final CrCAutoMessage crCAutoMessage;
     private final MessageManager messageManager;
     private final Map<String, String> messages = new HashMap<>();

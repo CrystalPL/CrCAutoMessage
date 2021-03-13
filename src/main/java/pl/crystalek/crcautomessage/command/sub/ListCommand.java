@@ -4,14 +4,14 @@ import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import pl.crystalek.crcautomessage.io.FileManager;
-import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.message.Message;
+import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.util.ChatUtil;
 
 import java.util.List;
 import java.util.Map;
 
-public class ListCommand implements SubCommand {
+public final class ListCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
 

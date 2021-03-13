@@ -4,6 +4,9 @@ import java.util.Optional;
 
 public final class NumberUtil {
 
+    private NumberUtil() {
+    }
+
     public static Optional<Short> isShort(final String number) {
         final short returnNumber;
         try {
@@ -25,8 +28,5 @@ public final class NumberUtil {
             return Optional.empty();
         }
         return Optional.of(returnNumber);
-    }
-
-    private NumberUtil() {
     }
 }

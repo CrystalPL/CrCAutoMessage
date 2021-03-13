@@ -4,7 +4,7 @@ import org.bukkit.command.CommandSender;
 import pl.crystalek.crcautomessage.io.FileManager;
 import pl.crystalek.crcautomessage.task.AutoMessageTask;
 
-public class ReloadCommand implements SubCommand {
+public final class ReloadCommand implements SubCommand {
     private final FileManager fileManager;
     private final AutoMessageTask autoMessageTask;
 

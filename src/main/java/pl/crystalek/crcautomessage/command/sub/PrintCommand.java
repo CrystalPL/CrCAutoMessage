@@ -4,7 +4,7 @@ import org.bukkit.command.CommandSender;
 import pl.crystalek.crcautomessage.io.FileManager;
 import pl.crystalek.crcautomessage.message.MessageManager;
 
-public class PrintCommand implements SubCommand {
+public final class PrintCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
 

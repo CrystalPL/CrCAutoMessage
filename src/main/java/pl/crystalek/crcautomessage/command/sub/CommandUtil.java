@@ -8,7 +8,7 @@ import pl.crystalek.crcautomessage.util.NumberUtil;
 import java.util.Optional;
 import java.util.Set;
 
-public class CommandUtil {
+public final class CommandUtil {
     private final FileManager fileManager;
     private final MessageManager messageManager;
 

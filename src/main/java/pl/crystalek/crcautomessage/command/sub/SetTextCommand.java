@@ -8,7 +8,7 @@ import pl.crystalek.crcautomessage.message.MessageManager;
 
 import java.util.Optional;
 
-public class SetTextCommand implements SubCommand {
+public final class SetTextCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
     private final CommandUtil commandUtil;

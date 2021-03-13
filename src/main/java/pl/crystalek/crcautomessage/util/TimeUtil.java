@@ -1,6 +1,9 @@
 package pl.crystalek.crcautomessage.util;
 
-public class TimeUtil {
+public final class TimeUtil {
+
+    private TimeUtil() {
+    }
 
     public static String getDateInString(long timeMillis, final String delimiter, final boolean shortForm) {
         if (timeMillis < 1000) {
@@ -19,8 +22,5 @@ public class TimeUtil {
         }
 
         return result.substring(delimiter.length());
-    }
-
-    private TimeUtil() {
     }
 }

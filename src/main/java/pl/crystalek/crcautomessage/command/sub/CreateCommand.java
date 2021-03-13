@@ -3,12 +3,12 @@ package pl.crystalek.crcautomessage.command.sub;
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.command.CommandSender;
 import pl.crystalek.crcautomessage.io.FileManager;
-import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.message.Message;
+import pl.crystalek.crcautomessage.message.MessageManager;
 
 import java.util.Map;
 
-public class CreateCommand implements SubCommand {
+public final class CreateCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
 

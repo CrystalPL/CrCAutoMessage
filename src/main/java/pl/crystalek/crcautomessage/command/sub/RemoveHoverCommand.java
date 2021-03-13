@@ -10,7 +10,7 @@ import pl.crystalek.crcautomessage.util.NumberUtil;
 import java.util.List;
 import java.util.Optional;
 
-public class RemoveHoverCommand implements SubCommand {
+public final class RemoveHoverCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
     private final CommandUtil commandUtil;

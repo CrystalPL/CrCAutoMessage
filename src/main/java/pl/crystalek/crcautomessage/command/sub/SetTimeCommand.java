@@ -9,7 +9,7 @@ import pl.crystalek.crcautomessage.util.TimeUtil;
 
 import java.util.Optional;
 
-public class SetTimeCommand implements SubCommand {
+public final class SetTimeCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
     private final CrCAutoMessage crCAutoMessage;

@@ -2,12 +2,12 @@ package pl.crystalek.crcautomessage.command.sub;
 
 import org.bukkit.command.CommandSender;
 import pl.crystalek.crcautomessage.io.FileManager;
-import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.message.Message;
+import pl.crystalek.crcautomessage.message.MessageManager;
 
 import java.util.Optional;
 
-public class StatusCommand implements SubCommand {
+public final class StatusCommand implements SubCommand {
     private final FileManager fileManager;
     private final MessageManager messageManager;
     private final CommandUtil commandUtil;
