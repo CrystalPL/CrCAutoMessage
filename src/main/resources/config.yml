@@ -2,7 +2,6 @@ config:
   autoMessageTime: 10
   messages:
 
-
 messages:
   notconsole: "&a&lAutoMessage &8» &cTa komenda nie moze zostac wywolana z konsoli."
   errorNumber: "&a&lAutoMessage &8» &cLiczba musi byc z zakresu <1, 32767>!"
@@ -10,6 +9,7 @@ messages:
   nopermission: "&cBrak uprawnien &7(&6CrC.automessage&7)"
   list:
     usage: "&a&lAutoMessage &8» &cPoprawne uzycie: &7/automsg list."
+    empty: "&a&lAutoMessage &8» &cBrak dodanych automatycznych wiadomosci!"
     list: "&a&lAutoMessage &8» &7Treść wiadomości: &6{TEXT}"
     titleMessageHover:
       - "&7Status: &6{STATUS}&7."

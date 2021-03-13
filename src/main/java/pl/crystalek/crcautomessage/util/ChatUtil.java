@@ -1,6 +1,5 @@
-package pl.crystalek.crcautomessage.utils;
+package pl.crystalek.crcautomessage.util;
 
-import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
 import net.md_5.bungee.api.chat.TextComponent;
@@ -24,9 +23,16 @@ public class ChatUtil {
     }
 
     public static TextComponent getHoverMessage(final String text, final String hover) {
-        final BaseComponent[] baseComponents = TextComponent.fromLegacyText(fixColor(text));
-        final TextComponent message = new TextComponent(baseComponents);
-        message.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(fixColor(hover)).create()));
+        final TextComponent message = getMessageTextComponent(text);
+        message.setHoverEvent(getHoverEvent(hover));
         return message;
+    }
+
+    public static TextComponent getMessageTextComponent(final String text) {
+        return new TextComponent(TextComponent.fromLegacyText(fixColor(text)));
+    }
+
+    public static HoverEvent getHoverEvent(final String hover) {
+        return new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(fixColor(hover)).create());
     }
 }

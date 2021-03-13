@@ -1,10 +1,10 @@
 package pl.crystalek.crcautomessage;
 
 import org.bukkit.plugin.java.JavaPlugin;
-import pl.crystalek.crcautomessage.commands.AutoMessageCommand;
+import pl.crystalek.crcautomessage.command.AutoMessageCommand;
 import pl.crystalek.crcautomessage.io.FileManager;
-import pl.crystalek.crcautomessage.managers.MessageManager;
-import pl.crystalek.crcautomessage.taska.AutoMessageTask;
+import pl.crystalek.crcautomessage.message.MessageManager;
+import pl.crystalek.crcautomessage.task.AutoMessageTask;
 
 public final class CrCAutoMessage extends JavaPlugin {
 
@@ -18,7 +18,4 @@ public final class CrCAutoMessage extends JavaPlugin {
         autoMessageTask.start();
         this.getCommand("automsg").setExecutor(new AutoMessageCommand(messageManager, fileManager, this, autoMessageTask));
     }
-
-    @Override
-    public void onDisable() {}
 }

@@ -26,14 +26,11 @@ repositories {
 
 shadowJar {
     minimize()
-    final String dest = System.getenv("DESTINATION")
-    if (dest != null) {
-        destinationDirectory.set(new File(dest))
-    }
+    destinationDirectory.set(new File("F:\\Minecraft\\mc1.16\\plugins"))
 }
 
 dependencies {
-    compileOnly 'com.destroystokyo.paper:paper-api:1.16.3-R0.1-SNAPSHOT'
+    compileOnly 'com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT'
 }
 
 processResources {

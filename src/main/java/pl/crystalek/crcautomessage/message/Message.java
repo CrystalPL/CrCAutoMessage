@@ -1,8 +1,12 @@
-package pl.crystalek.crcautomessage.models;
+package pl.crystalek.crcautomessage.message;
+
+import net.md_5.bungee.api.chat.TextComponent;
+import pl.crystalek.crcautomessage.util.ChatUtil;
 
 import java.util.List;
 
 public class Message {
+    private final TextComponent textComponent;
     private String text;
     private boolean status;
     private List<String> hover;
@@ -10,6 +14,7 @@ public class Message {
     public Message(final String text, final boolean status) {
         this.text = text;
         this.status = status;
+        this.textComponent = ChatUtil.getMessageTextComponent(text);
     }
 
     public String getText() {
@@ -34,5 +39,9 @@ public class Message {
 
     public void setHover(final List<String> hover) {
         this.hover = hover;
+    }
+
+    public TextComponent getTextComponent() {
+        return textComponent;
     }
 }

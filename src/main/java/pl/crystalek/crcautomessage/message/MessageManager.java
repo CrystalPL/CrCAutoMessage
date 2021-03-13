@@ -1,6 +1,4 @@
-package pl.crystalek.crcautomessage.managers;
-
-import pl.crystalek.crcautomessage.models.Message;
+package pl.crystalek.crcautomessage.message;
 
 import java.util.HashMap;
 import java.util.Map;
