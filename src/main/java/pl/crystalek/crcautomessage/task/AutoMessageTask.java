@@ -25,6 +25,7 @@ public final class AutoMessageTask {
         if (enabledMessage.isEmpty()) {
             return;
         }
+
         final BukkitTask bukkitTask = new BukkitRunnable() {
             private int index;
 

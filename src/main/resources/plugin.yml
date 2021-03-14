@@ -1,7 +1,7 @@
 name: CrCAutoMessage
 version: @version@
 main: pl.crystalek.crcautomessage.CrCAutoMessage
-api-version: 1.16
+api-version: 1.16.5
 authors: [ Crystal ]
 website: crystalek.pl
 

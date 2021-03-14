@@ -36,14 +36,15 @@ public final class AddHoverCommand implements SubCommand {
         }
 
         final Message message = messageManager.getAutoMsgMap().get(messageId);
-        final List<String> hover = message.getHover();
+        List<String> hover = message.getHover();
         if (hover == null) {
-            message.setHover(new ArrayList<>());
+            hover = new ArrayList<>();
         }
 
         final String join = StringUtils.join(args, ' ', 2, args.length);
         hover.add(join);
         message.getTextComponent().setHoverEvent(ChatUtil.getHoverEvent(String.join("\n", hover)));
+        message.setHover(hover);
 
         fileManager.setMessage(messageId + ".hoverText", hover);
         sender.sendMessage(fileManager.getMsg("addhover.addHover"));

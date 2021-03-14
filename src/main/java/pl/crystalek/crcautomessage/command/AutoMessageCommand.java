@@ -6,13 +6,12 @@ import org.bukkit.command.TabExecutor;
 import pl.crystalek.crcautomessage.CrCAutoMessage;
 import pl.crystalek.crcautomessage.command.sub.*;
 import pl.crystalek.crcautomessage.io.FileManager;
+import pl.crystalek.crcautomessage.message.Message;
 import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.task.AutoMessageTask;
+import pl.crystalek.crcautomessage.util.NumberUtil;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public final class AutoMessageCommand implements TabExecutor {
@@ -69,6 +68,25 @@ public final class AutoMessageCommand implements TabExecutor {
         } else if (args.length == 2) {
             if (args[0].equalsIgnoreCase("delete") || args[0].equalsIgnoreCase("removehover") || args[0].equalsIgnoreCase("addhover") || args[0].equalsIgnoreCase("settext") || args[0].equalsIgnoreCase("status")) {
                 tabList.addAll(messageManager.getAutoMsgMap().keySet().stream().map(String::valueOf).collect(Collectors.toList()));
+            }
+        } else if (args.length == 3) {
+            if (args[0].equalsIgnoreCase("removehover")) {
+                final Optional<Short> shortOptional = NumberUtil.isShort(args[1]);
+                if (shortOptional.isPresent()) {
+                    final short id = shortOptional.get();
+                    final Map<Short, Message> autoMsgMap = messageManager.getAutoMsgMap();
+
+                    if (autoMsgMap.containsKey(id)) {
+                        final Message message = autoMsgMap.get(id);
+                        final List<String> hover = message.getHover();
+
+                        if (hover != null) {
+                            for (int i = 0; i < hover.size(); i++) {
+                                tabList.add(String.valueOf(i + 1));
+                            }
+                        }
+                    }
+                }
             }
         }
 

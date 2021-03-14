@@ -6,7 +6,6 @@ import pl.crystalek.crcautomessage.message.MessageManager;
 import pl.crystalek.crcautomessage.util.NumberUtil;
 
 import java.util.Optional;
-import java.util.Set;
 
 public final class CommandUtil {
     private final FileManager fileManager;
@@ -23,7 +22,6 @@ public final class CommandUtil {
             return Optional.empty();
         }
 
-        final Set<Short> idList = messageManager.getAutoMsgMap().keySet();
         final Optional<Short> shortOptional = NumberUtil.isShort(args[1]);
         if (!shortOptional.isPresent()) {
             sender.sendMessage(fileManager.getMsg("errorNumber"));
@@ -31,7 +29,7 @@ public final class CommandUtil {
         }
 
         final short id = shortOptional.get();
-        if (!idList.contains(id)) {
+        if (!messageManager.getAutoMsgMap().containsKey(id)) {
             sender.sendMessage(fileManager.getMsg("messageNotExist"));
             return Optional.empty();
         }

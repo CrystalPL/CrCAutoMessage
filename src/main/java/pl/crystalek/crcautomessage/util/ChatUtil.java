@@ -29,7 +29,9 @@ public final class ChatUtil {
     }
 
     public static TextComponent getMessageTextComponent(final String text) {
-        return new TextComponent(TextComponent.fromLegacyText(fixColor(text)));
+        final TextComponent textComponent = new TextComponent();
+        textComponent.setText(fixColor(text));
+        return textComponent;
     }
 
     public static HoverEvent getHoverEvent(final String hover) {
